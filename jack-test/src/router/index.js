@@ -26,6 +26,11 @@ const routes = [
     name: "date",
     component: () => import("../views/DatePicker.vue"),
   },
+  {
+    path: "/drag",
+    name: "drag",
+    component: () => import("../views/Drag.vue"),
+  },
 ];
 
 const router = createRouter({

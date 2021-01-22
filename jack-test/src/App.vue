@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/ajax">Ajax</router-link> |
-    <router-link to="/date">DatePicker</router-link>
+    <router-link to="/date">DatePicker</router-link> |
+    <router-link to="/drag">Drag</router-link>
     <hr />
     <router-view />
   </div>
