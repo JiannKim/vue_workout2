@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import { getR } from "../api";
+import { getR } from '../api';
 
 export default {
   data() {
     return {
-      get: "",
+      get: '',
     };
   },
   methods: {
@@ -27,7 +27,7 @@ export default {
     // },
     async Req() {
       const data = await getR();
-      console.log("data =>", data);
+      console.log('data =>', data);
       this.get = data;
     },
   },

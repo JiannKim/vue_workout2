@@ -31,39 +31,39 @@ export default {
   data() {
     return {
       items: [
-        { id: 0, title: "A", list: 1 },
-        { id: 1, title: "B", list: 1 },
-        { id: 2, title: "C", list: 2 },
+        { id: 0, title: 'A', list: 1 },
+        { id: 1, title: 'B', list: 1 },
+        { id: 2, title: 'C', list: 2 },
       ],
     };
   },
   computed: {
     listOne() {
-      const list = this.items.filter((item) => item.list === 1);
-      console.log("listOne", list);
+      const list = this.items.filter(item => item.list === 1);
+      console.log('listOne', list);
       return list;
     },
     listTwo() {
-      const list = this.items.filter((item) => item.list === 2);
-      console.log("listTwo", list);
+      const list = this.items.filter(item => item.list === 2);
+      console.log('listTwo', list);
       return list;
     },
   },
   methods: {
     dragStart: (evt, item) => {
-      console.log("start");
-      evt.dataTransfer.dropEffect = "move";
-      evt.dataTransfer.effectAllowed = "move";
-      evt.dataTransfer.setData("itemID", item.id);
-      console.log("end");
+      console.log('start');
+      evt.dataTransfer.dropEffect = 'move';
+      evt.dataTransfer.effectAllowed = 'move';
+      evt.dataTransfer.setData('itemID', item.id);
+      console.log('end');
     },
     drop(evt, list) {
-      const itemID = evt.dataTransfer.getData("itemID");
-      const item = this.items.find((item) => item.id === itemID);
+      const itemID = evt.dataTransfer.getData('itemID');
+      const item = this.items.find(item => item.id === itemID);
       item.list = list;
     },
     dragEnd(e) {
-      console.log("end");
+      console.log('end');
       e;
     },
   },
