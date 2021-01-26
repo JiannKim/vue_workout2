@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { getR } from '../api';
+import { getReq } from '../api';
 
 export default {
   data() {
@@ -17,18 +17,12 @@ export default {
     };
   },
   methods: {
-    //
-    // async Req() {
-    //   const URL =
-    //     "https://36bl37sesg.execute-api.ap-northeast-2.amazonaws.com/recurit/helloSmartjack";
-    //   const config = {};
-    //   const get = await getReq(URL, config);
-    //   this.get = get;
-    // },
     async Req() {
-      const data = await getR();
-      console.log('data =>', data);
-      this.get = data;
+      const URL =
+        'https://36bl37sesg.execute-api.ap-northeast-2.amazonaws.com/recurit/helloSmartjack';
+      const config = {};
+      const get = await getReq(URL, config);
+      this.get = get;
     },
   },
 };
